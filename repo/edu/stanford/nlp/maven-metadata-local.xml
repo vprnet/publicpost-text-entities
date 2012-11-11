@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>edu.stanford</groupId>
+  <artifactId>nlp</artifactId>
+  <versioning>
+    <versions>
+      <version>2012.7.9-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20121110191957</lastUpdated>
+  </versioning>
+</metadata>

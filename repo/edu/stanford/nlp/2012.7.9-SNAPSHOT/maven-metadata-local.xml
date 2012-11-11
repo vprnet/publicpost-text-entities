@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>edu.stanford</groupId>
+  <artifactId>nlp</artifactId>
+  <version>2012.7.9-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <lastUpdated>20121110191957</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>2012.7.9-SNAPSHOT</value>
+        <updated>20121110191957</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>sources</classifier>
+        <extension>jar</extension>
+        <value>2012.7.9-SNAPSHOT</value>
+        <updated>20121110191955</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>2012.7.9-SNAPSHOT</value>
+        <updated>20121110191955</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

@@ -1,4 +1,22 @@
+# Backup files #
+################
+*.swp
+*~
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Idea project files #
+######################
+.idea
+.iml
+.ipr
+.iws
+
+# Build artifacts #
+###################
 target/
-*.iml
-*.ipr
-*.iws
