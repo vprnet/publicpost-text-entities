@@ -75,7 +75,7 @@ public class NERResource
                                 }
                             colEntities.add(sEntity);
 
-                            cch += sType.length() + sEntity.length() + 7; // "...", "..."\n
+                            cch += sType.length() + sEntity.length() + 2; // ...,...\n
                             }
                         }
                     }
@@ -91,12 +91,9 @@ public class NERResource
 
             for (String sEntity : colEntities)
                 {
-                builder.append('"');
                 builder.append(sType);
-                builder.append("\", ");
-                builder.append('"');
+                builder.append(',');
                 builder.append(sEntity);
-                builder.append('"');
                 builder.append('\n');
                 }
             }
@@ -236,6 +233,39 @@ public class NERResource
      */
     protected String escapeForCSV(String sText)
         {
-        return sText.replaceAll("\"", "\\\"");
+        if (sText == null)
+            {
+            return null;
+            }
+        sText = sText.trim();
+
+        // escape all double quotes in the field with two double quotes and
+        // if the field contains a comma, double quote, or newline surround
+        // it with double quotes
+        //
+        // see http://tools.ietf.org/html/rfc4180
+        int     cchOld = sText.length();
+        sText = sText.replaceAll("\"", "\"\"");
+        int     cchNew = sText.length();
+        boolean fQuote = cchNew > cchOld;
+
+        if (!fQuote)
+            {
+            for (int i = 0; i < cchNew; ++i)
+                {
+                char ch = sText.charAt(i);
+                if (ch == ',' || ch == '\n')
+                    {
+                    fQuote = true;
+                    break;
+                    }
+                }
+            }
+        if (fQuote)
+            {
+            sText = '"' + sText + '"';
+            }
+
+        return sText;
         }
     }
