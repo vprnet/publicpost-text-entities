@@ -3,10 +3,12 @@ text-entities
 
 Stanford NER (Named Entity Recognizer) web application.
 
-To build and run:
+Deployed on Heroku at: http://text-entities.herokuapp.com/classify
 
-(1) Build the web application:
+To run locally:
+
+    mkdir text-entities
+    git clone https://github.com/NearbyFYI/text-entities.git text-entities
+    heroku git:remote -a text-entities
     mvn install
-
-(2) Launch the application:
     java -server -Xms1024m -Xmx1024m -jar target/dependency/jetty-runner.jar target/*.war
