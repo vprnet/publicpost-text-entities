@@ -5,6 +5,10 @@ Stanford NER (Named Entity Recognizer) web application.
 
 Deployed on Heroku at: http://text-entities.herokuapp.com/classify
 
+For example:
+
+    curl -H "Accept: text/plain" --data "Jason Howes works at NearbyFYI, Inc. and lives in Somerville, Massachusetts" http://text-entities.herokuapp.com/classify
+
 To run locally:
 
     mkdir text-entities
